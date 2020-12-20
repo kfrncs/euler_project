@@ -1,11 +1,12 @@
 fn main() {
-    let mut i: usize = 1;
+    let mut i: usize = 20;
     // This number is 1 less than usize's limit
-    for i in 1..std::usize::MAX { 
+    while i < std::usize::MAX { 
         if is_divisible_by_all(i) {
             println!("{} is divisible by all numbers between 1 and 20.", i);
             break
         }
+        i += 20;
     }
 }
         
